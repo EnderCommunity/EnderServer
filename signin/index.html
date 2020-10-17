@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      window.shouldSkipOnSignedIn = true;
+    </script>
+    <script src="./../assets/js/accounts.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In | [Service_Name]</title>
+    <style>
+    html, body{
+      padding: 0px;
+      margin: 0px;
+      scroll-behavior: smooth;
+    }
+    #loadingScreen{
+      position: fixed;
+      z-index: 10;
+      top: 0px;
+      bottom: 0px;
+      right: 0px;
+      left: 0px;
+      background-color: #333333;
+    }
+    .loading-2 .spinner * {
+        box-sizing: border-box;
+      }
+      .loading-2 .spinner {
+        display: inline-block;
+        animation-name: anim-spinner;
+        animation-duration: 0.7s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        margin: calc(50vh - 15px) calc(50vw - 30px);
+      }
+      .loading-2 .spinner .circle {
+        width: 60px;
+        height: 30px;
+        overflow: hidden;
+      }
+      .loading-2 .spinner .circle-inner {
+        transform: rotate(45deg);
+        border-radius: 50%;
+        border: 0.25em solid white;
+        border-right: 0.25em solid transparent;
+        border-bottom: 0.25em solid transparent;
+        width: 100%;
+        height: 200%;
+        animation-name: anim-circle-1;
+        animation-duration: 0.7s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: cubic-bezier(0.25, 0.1, 0.5, 1);
+      }
+      .loading-2 .spinner .circle-2 {
+        transform: rotate(180deg);
+      }
+      .loading-2 .spinner .circle-2 .circle-inner {
+        animation-name: anim-circle-2;
+      }
+      @keyframes anim-circle-1 {
+        from {
+          transform: rotate(60deg);
+        }
+        to {
+          transform: rotate(205deg);
+        }
+      }
+      @keyframes anim-circle-2 {
+        from {
+          transform: rotate(30deg);
+        }
+        to {
+          transform: rotate(-115deg);
+        }
+      }
+      @keyframes anim-spinner {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+    <meta charset="UTF-8">
+    <meta name="referrer" content="strict-origin">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <meta name="language" content="English">
+    <meta name="lang" content="en">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link rel="shortcut icon" type="image/ico" href="./../assets/image/icon.ico">
+    <link rel="stylesheet" type="text/css" href="./../assets/css/style.css">
+    <link href="./../assets/css/font.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="loadingScreen" no-select>
+      <div class="item loading-2">
+        <div class="spinner">
+          <div class="circle circle-1">
+            <div class="circle-inner"></div>
+          </div>
+          <div class="circle circle-2">
+            <div class="circle-inner"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bar" no-select>
+      <text class="option">[Service_Name]</text>
+    </div>
+    <div class="mm">
+      <img>
+      <h1 class="m">Sign In</h1>
+      <h4>[Custom_Message]</h4>
+    </div>
+    <div class="message">
+      <h4>[The_Message]</h4>
+    </div>
+    <div class="page">
+      <div id="username" class="slideIn" style="display: none;">
+        Please enter your username:
+        <br>
+        <text id="alt">@</text>
+        <input name="usernameInput" type="text">
+        <text class="usernameInput" style="display: none;">[Error_Message]</text>
+        <br>
+        <div class="COfButtons">
+          <button id="_createAccount">Create an account</button>
+          <button id="_next" class="primary">Next</button>
+        </div>
+      </div>
+      <div id="password" class="slideIn" style="display: none;">
+        Please enter your password:
+        <br>
+        <input name="passwordInput" type="password">
+        <text class="passwordInput" style="display: none;">[Error_Message]</text>
+        <br>
+        <a href="./../help/password/">Forgot your password?</a>
+        <div class="COfButtons">
+          <button id="_goBack">Go back</button>
+          <button id="_signIn" class="primary">Sign In</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+        <text><a href="[Service_Website_URL]" target="_blank">[Service_Name]</a> | <a href="[Service_Terms_URL]" target="_blank">Terms of Use</a> | <a href="[Service_Privacy_Policy_URL]" target="_blank">Privacy Policy</a> | <a href="[Service_Cookies_Policy_URL]" target="_blank">Cookies Policy</a> | <a href="[Service_Disclaimer_URL]" target="_blank">Disclaimer</a></text>
+    </div>
+    <script src="./../assets/js/start.js"></script>
+    <script src="./../assets/js/signin.js"></script>
+  </body>
+</html>
